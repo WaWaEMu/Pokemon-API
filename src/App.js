@@ -19,6 +19,7 @@ const App = () => {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${poke.name}`);
         const data = await res.json();
         setPokes(currentArr => [...currentArr, data]);
+        pokes.sort((a, b) => a.id - b.id )
       }));
     };
 
@@ -43,8 +44,9 @@ const App = () => {
       <div className="title">
         <h2>Pokédex</h2>
       </div>
-      <br />
-      <hr className='hr-shadow' />
+      <div className="hrDiv">
+        <hr className='hr-shadow' />
+      </div>
       <div className="pokedex-container">
         <Routes>
           <Route path='/Pokemon-API' element={
