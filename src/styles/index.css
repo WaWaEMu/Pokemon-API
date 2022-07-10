@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.rock {
+  background-color: #9e9559;
+}
+
+.ghost {
+  background-color: #802e86;
+}
+
+.electric {
+  background-color: #ffffa1;
+}
+
+.bug {
+  background-color: #e6f49b;
+}
+
+.poison {
+  background-color: #e0a7f6;
+}
+
+.normal {
+  background-color: #F4F4F4;
+}
+
+.fairy {
+  background-color: rgba(255, 192, 203, 0.863);
+}
+
+.fire {
+  background-color: #f49c74;
+}
+
+.grass {
+  background-color: #aef5ac;
+}
+
+.water {
+  background-color: #afd8f6;
+}
+
+.ice {
+  background-color: #80f0f0;
+}
+
+.fighting {
+  background-color: #f1c784;
+}
+
+.dragon {
+  background-color: #b3b3f0;
+}
+
+.ground {
+  background-color: #f1c784;
+}
+
+.psychic {
+  background-color: #ca2d8b;
+}
+
+.dark {
+  background-color: #828282;
+}
+
+.steel {
+  background-color: #18a08e;
+}
+
+.all-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 4rem;
+}
+
+.title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hr-shadow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 87vw;
+  border-radius: 10px;
+  border: 0;
+  padding-top: 10px;
+  color: #8a8a92;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0 15px 10px -10px;
+          box-shadow: inset 0 15px 10px -10px;
+}
+
+.pokedex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 3rem 3rem;
+}
+
+.poke-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 210px;
+  height: 250px;
+  border-radius: 5%;
+  margin: 0.1rem 0.1rem;
+}
+
+.poke-container .poke-id {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.poke-container .poke-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 120px;
+  height: 120px;
+}
+
+.poke-container .poke-image:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.poke-container .poke-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+}
+
+.poke-container .poke-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=index.css.map */
