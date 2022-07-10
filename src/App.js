@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
-import axios from "axios";
 import Pokedex from "./components/Pokedex";
 
 const App = () => {
@@ -48,7 +47,7 @@ const App = () => {
       <hr className='hr-shadow' />
       <div className="pokedex-container">
         <Routes>
-          <Route path='/' element={
+          <Route path='/Pokemon-API' element={
             pokes.map((poke, index) => {
               return <Pokedex
                 id={poke.id}
