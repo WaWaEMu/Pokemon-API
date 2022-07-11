@@ -13,21 +13,21 @@ const App = () => {
 
     setMorePokes(data.next);
 
-    const createPokeObject = (results) => {
+    const createPokeObject = async(results) => {
       return (
         results.forEach(async (poke) => {
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${poke.name}`);
-        const data = await res.json();
-        setPokes(currentArr => [...currentArr, data]);
-        pokes.sort((a, b) => a.id - b.id )
-      }));
+          const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${poke.name}`);
+          const data = await res.json();
+          setPokes(currentArr => {
+            currentArr=[...currentArr, data];
+            currentArr.sort((a, b) => a.id - b.id)
+            return currentArr;
+          });
+        })
+      );
     };
 
     createPokeObject(data.results);
-    const sortPokes = () => {
-      return (pokes.sort((a, b) => a.id - b.id));
-    };
-    sortPokes();
   }
 
   const handleMorePokes = () => {
