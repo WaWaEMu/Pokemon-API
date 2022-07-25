@@ -18,6 +18,7 @@ const App = () => {
         results.forEach(async (poke) => {
           const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${poke.name}`);
           const data = await res.json();
+          console.log(data);
           setPokes(currentArr => {
             currentArr=[...currentArr, data];
             currentArr.sort((a, b) => a.id - b.id)
@@ -26,6 +27,7 @@ const App = () => {
         })
       );
     };
+
 
     createPokeObject(data.results);
   }
@@ -62,8 +64,8 @@ const App = () => {
           }/>
         </Routes>
       </div>
-      <div className="button">
-        <button onClick={() => handleMorePokes()} className={"btn btn-outline-danger btn-lg"} type="button">More Pokés</button>
+      <div className="button-div">
+        <button onClick={() => handleMorePokes()} className="button" type="button"><strong>More Pokés</strong></button>
       </div>
     </div>
   );
