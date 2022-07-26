@@ -91,26 +91,11 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.hrDiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-.hr-shadow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 85vw;
-  border-radius: 10px;
-  border: 0;
-  padding-top: 10px;
-  color: #8a8a92;
-  border-top: 1px solid rgba(0, 0, 0, .1);
-  box-shadow: inset 0 15px 10px -10px;
+  h2 {
+    font-size: 2.5rem;
+    color: #4d4d50;
+  }
 }
 
 .pokedex-container {
@@ -123,50 +108,101 @@ code {
 
 .poke-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 200px;
   height: 230px;
-  border-radius: 5%;
   margin: 0.1rem 0.1rem;
+  position: relative;
+  perspective: 1000px;
+  cursor: pointer;
 
-  // &:hover .article-head {
-
-  //   background-color: #aaa;
-  //   /* 當滑鼠經過時，背景顏色改變 */
-
-  // }
-
-  .poke-id {
+  .front {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-  }
-
-  .poke-image {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    width: 110px;
-    height: 110px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    position: absolute;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform .75s ease-in-out;
 
-    &:hover {
-      transform: scale(1.25);
+    .poke-id {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .poke-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 110px;
+      height: 110px;
+
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+
+    .poke-name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+
+    .poke-type {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .click-flip {
+      margin-left: auto;
+      margin-right: 0.75rem;
+      margin-bottom: -0.5rem;
+      color: #62627b;
+      font-size: 5px;
     }
   }
 
-  .poke-name {
+  .reserve {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    font-size: 1.5rem;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    position: absolute;
+    transform: rotateY(-180deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: transform .75s ease-in-out;
+    color: #4d4d50;
+
+    .poke-hp {}
+
+    .poke-attack {}
+
+    .poke-defense {}
+
+    .poke-height {}
+
+    .poke-weight {}
   }
 
-  .poke-type {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .front-flip {
+    transform: rotateY(180deg);
+  }
+
+  .reserve-flip {
+    transform: rotateY(0deg);
   }
 }
 
@@ -201,39 +237,52 @@ code {
 
   .poke-container {
     width: 25vw;
-    height: 30vw;
+    height: 33vw;
     max-height: 100%;
     max-width: 100%;
     margin: 0.3rem 0.3rem;
 
-    .poke-id {
-      font-size: 0.7rem;
-    }
-
-    .poke-image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 13vw;
-      height: 13vw;
-      max-width: 100%;
-      max-height: 100%;
-
-      &:hover {
-        transform: scale(1.25);
+    .front {
+      .poke-id {
+        font-size: 0.7rem;
       }
-    }
 
-    .poke-name {
-      font-size: 0.8rem;
-    }
+      .poke-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 13vw;
+        height: 13vw;
+        max-width: 100%;
+        max-height: 100%;
 
-    .poke-type {
-      font-size: 0.7rem;
+        &:hover {
+          transform: scale(1.25);
+        }
+      }
+
+      .poke-name {
+        font-size: 0.8rem;
+      }
+
+      .poke-type {
+        font-size: 0.7rem;
+      }
+
+      .click-flip {
+        margin-left: 0%;
+        margin-bottom: 0rem;
+        font-size: 0.5rem;
+      }
     }
   }
 
-  .button {
-    margin-top: 1.5rem;
+  .button-div {
+
+    .button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+    }
   }
 }

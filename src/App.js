@@ -44,10 +44,7 @@ const App = () => {
   return (
     <div className="all-container">
       <div className="title">
-        <h2>Pokédex</h2>
-      </div>
-      <div className="hrDiv">
-        <hr className='hr-shadow' />
+        <h2><strong>Pokédex</strong></h2>
       </div>
       <div className="pokedex-container">
         <Routes>
@@ -59,6 +56,9 @@ const App = () => {
                 image={poke.sprites.other.dream_world.front_default}
                 type={poke.types[0].type.name}
                 key={index}
+                stats={poke.stats}
+                height={poke.height}
+                weight={poke.weight}
               />
             })
           }/>
