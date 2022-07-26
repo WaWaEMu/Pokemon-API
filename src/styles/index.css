@@ -348,6 +348,9 @@ code {
     margin-bottom: 0rem;
     font-size: 0.5rem;
   }
+  .poke-container .reserve {
+    font-size: .5rem;
+  }
   .button-div .button {
     margin-top: 1.5rem;
     padding: 0.75rem 1rem;
